@@ -1,0 +1,4 @@
+discord
+colorama
+asyncio
+aiofile
